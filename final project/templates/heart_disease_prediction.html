@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h5 class = "text-center">Sample Data</h5>
+
+<div class="text-center">
+    <img src="{{ url_for('static', filename='sampledata.png') }}"
+    class="image"/>
+
+
+<style>
+    .image {
+        width: 500px;
+    }
+</style>
+
+<p>  </p>
+
+<h5 class = "text-center">Please enter your information below to predict the heart disease</h5>
+
+<p>   </p>
+    
+<form method = "POST">
+    BMI: <input type = "text" name = "BMI" />
+    PhysicalHealth: <input type = "text" name = "PhysicalHealth" />
+    MentalHealth: <input type = "text" name = "MentalHealth" />
+    SleepTime: <input type = "text" name = "SleepTime" />
+    <input type = "submit">
+
+</form>
+
+<p>*BMI: Body Mass Index</p>
+<p>*PhysicalHealth : Now thinking about your physical health, 
+    which includes physical illness and injury, for how many days during the past 30 days was your 
+    physical health not good? (0-30 days).</p>
+<p>*MentalHealth : Thinking about your mental health, for how many days during the past 30 days was your mental health not good? (0-30 days).</p>
+<p>*SleepTime : On average, how many hours of sleep do you get in a 24-hour period?</p>
+<p class = "text-center">*Result---Yes: might have heart disease       No: might not have heart disease</p>
+  {% endblock %}

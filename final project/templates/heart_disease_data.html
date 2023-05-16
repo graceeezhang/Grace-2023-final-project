@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class = "text-center">Heart Disease Data Visualization</h2>
+
+<p>  </p>
+
+<h5 class = "text-center">Age Distribution and Heart Disease</h5>
+
+<img src="{{ url_for('static', filename='age.png') }}"
+    class="image"/>
+
+    <img src="{{ url_for('static', filename='age and heart disease.png') }}"
+    class="image"/>
+
+
+<style>
+    .image {
+        width: 700px;
+    }
+</style>
+
+<p>Here are some data collection of age distribution. Most of the samples are aged more 60. From the plot on the right we see that
+    when people are getting older, they have higher chance to get heart disease. Most of the people who suffer from 
+    heart disease are the 80 years and older group. People aged 18-24 and 25-29 suffer least from heart disease.
+</p>
+
+
+<h5 class = "text-center">Smoking and Heart Disease</h5>
+
+<div class="text-center">
+    <img src="{{ url_for('static', filename='smoking.png') }}"
+    class="image"/>
+
+
+<style>
+    .image {
+        width: 700px;
+    }
+</style>
+<p>On the left it is the data of people who smoke and on the right is people who do not smoke. The blue one is people 
+    with heart is and the orange one is people without. The plot suggests that when someone does not smoke, he or she will 
+    have a lower chance to get heart disease because compared with the smoking sample, more non-smokers report without heart disease
+    and less report heart disease.
+</p>
+
+<h5 class = "text-center">Gender and Heart Disease</h5>
+
+<div class="text-center">
+    <img src="{{ url_for('static', filename='g.png') }}"
+    class="image">
+
+    <style>
+        .image {
+            width: 700px;
+        }
+    </style>
+
+<p>The plot suggests that male is more likely to get heart disease
+</p>
+
+{% endblock %}

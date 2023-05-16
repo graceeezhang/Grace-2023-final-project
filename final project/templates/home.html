@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class = "text-center">WELCOME!</h1>
+
+<p class = "text-center">Heart Disease Data Visualization and Prediction</p>
+
+  <div class="text-center">
+    <img src="{{ url_for('static', filename='image.jpg') }}"
+    class="rounded"/>
+
+
+    <style>
+        .image {
+            width: 500px;
+        }
+    </style>
+
+{% endblock %}
